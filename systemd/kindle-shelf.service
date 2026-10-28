@@ -1,0 +1,11 @@
+[Unit]
+Description=Kindle Shelf book queue (search → TorBox/LibGen → Calibre → Kindle)
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/kindle-shelf daemon
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
